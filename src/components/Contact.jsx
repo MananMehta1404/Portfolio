@@ -9,10 +9,6 @@ import { SectionWrapper } from "../hoc";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
-const ServiceId = import.meta.env.EmailJS_ServiceKey;
-const TemplateId = import.meta.env.EmailJS_TemplateKey;
-const UserId = import.meta.env.EmailJS_PublicKey;
-
 const Contact = () => {
 
   const formRef = useRef();
@@ -34,8 +30,8 @@ const Contact = () => {
     setLoading(true);
 
     emailjs.send(
-      ServiceId,
-      TemplateId,
+      'service_xsjsh1o',
+      'template_y2ziehs',
       {
         from_name: form.name,
         to_name: 'Manan',
@@ -43,7 +39,7 @@ const Contact = () => {
         to_email: 'mehtamanan1442003@gmail.com',
         message: form.message,
       },
-      UserId
+      'Q44srEi0RFVpSGIsP'
     ).then(() => {
       setLoading(false);
       alert('Thank you. I will get back to you as soon as possible.');
