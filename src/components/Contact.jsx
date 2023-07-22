@@ -9,9 +9,9 @@ import { SectionWrapper } from "../hoc";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 
-const ServiceId = process.env.EmailJS_ServiceKey;
-const TemplateId = process.env.EmailJS_TemplateKey;
-const UserId = process.env.EmailJS_PublicKey;
+const ServiceId = import.meta.env.EmailJS_ServiceKey;
+const TemplateId = import.meta.env.EmailJS_TemplateKey;
+const UserId = import.meta.env.EmailJS_PublicKey;
 
 const Contact = () => {
 
